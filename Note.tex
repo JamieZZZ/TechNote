@@ -1,0 +1,122 @@
+\documentclass[11pt,twoside,a4paper]{article}
+
+\usepackage{textcomp}
+
+
+\begin{document}
+
+\section{Git} % Git Notes
+\subsection{Getting Started} % Chapter 1
+\begin{enumerate}
+  \item \textbf{VCS}: Version Control System; Centralized VCS; Distributed VCS;
+  \item \textbf{Git Basics}:
+    \begin{itemize}
+      \item Snapshots, Not differences
+      \item The three states: \textbf{Committed}, .git directory (Repository), data is safely stored in ur local database; \textbf{Modified}, Working Directory, u have changed ur file but have not commited to ur local database yet; \textbf{staged}, Staging Area, u have marked a modified file in its current version to go into ur next commit snapshot.
+    \end{itemize}
+\end{enumerate}
+
+\subsection{Git Basics} % Chapter 2
+\begin{enumerate}
+  \item Getting a Git Repository
+    \begin{itemize}
+      \item Initialize a Repository in an Existing Directory: \textbf{git init}; (then git add file)
+      \item Cloning an Existing Repository: \textbf{git clone} [url]
+    \end{itemize}
+  \item Recording Changes to the Repository
+    \begin{itemize}
+      \item \textbf{git status}; \textbf{git add}; \textbf{git status -s / --short}, short status; \textbf{git diff}, changed but not staged, --staged / --cached, staged to be committed;
+      \item Ignoring files
+      \item \textbf{git commit}, -v, add diff content; \textbf{git commit -a -m [msg]}, skip the staging area, add all tracked files and commit.
+      \item \textbf{git rm file}, delete a file, git rm -f file, remove it forcely, git rm --cached file, add it in the ignore file list but keep it in the dir.
+      \item \textbf{git mv oldname newname}
+    \end{itemize}
+  \item Viewing the Commit History
+    \begin{itemize}
+      \item \textbf{git log}, git log -p -[num], including diff info; git log --stat, abbreviated stats; git log --pretty=oneline / short / full / fuller / format:``\%h - \%an, \%ar : \%s''
+    \end{itemize}
+\end{enumerate}
+
+\subsection{Tips} % Git Tips
+\begin{enumerate}
+  \item git test
+\end{enumerate}
+\newpage
+
+
+\section{Ubuntu} % Ubuntu Notes
+\subsection{Tips} % Ubuntu Tips
+\begin{enumerate}
+  \item \textbf{open pdf via terminal}: evince file.pdf
+  \item \textbf{tab commands in gnome-teminal}:
+    \begin{itemize}
+      \item \textbf{close}: CTRL + SHIRT + W
+      \item \textbf{new}: CTRL + SHIRT + T
+      \item \textbf{switch}: ALT + [NUMBER]; CTRL + PgDn; CTRL + PgUp;
+    \end{itemize}
+\end{enumerate}
+\newpage
+
+
+\section{\LaTeX} % LaTeX Note
+\subsection{The not so short introduction to \LaTeXe} % The not so short introduction to LaTeXe
+\subsubsection{Things You Need to Know} % Chapter 1
+\begin{itemize}
+  \item \textbf{WYSIWYG}: What you see is what you get.
+  \item \TeX{} is a computer program created by Donald E. Knuth. It is aimed at typesetting text and mathematical formulae.
+  \item Blank, tab or several consecutive whitespace characters are treated as \textit{one} space. An empty line between two lines of text defnes the end of a paragraph; Several empty lines are treated as one empty line.
+  \item \textbf{Sepcial Characters}: \# \$ \% \^{} \{ \} \& \_ \~{} \textbackslash (Note: \textbackslash\textbackslash is for linebreak, use \textbackslash textbackslash instead).
+  \item \LaTeX{} ignores whitespace after commands. Put an empty \{ \} to stop \LaTeX from eating up all the whitespaces after commands.
+  \item \{ \}: required parameters; [ ] optional parameters
+  \item latex file.tex; dvipdf file.dvi
+\end{itemize}
+
+\subsubsection{Typesetting Text} % Chapter 2
+\begin{itemize}
+  \item Paragraph, as the text unit, is the typographical form that should reflect one coherent thought, or one idea. If a new thought begins, a new paragraph should begin with an empty line, instead of line breaker, \textbackslash \textbackslash (start a new line instead of a paragraph).
+  \item \textbackslash mbox\{\textit{text}\}: it causes its arguments to be kept together on one line. \textbackslash fbox\{\textit{text}\}: add a visible box in addition.
+  \item \textbf{quotation marks}: `` '' ` '
+  \item \textbf{dashes and hyphens}:
+    \begin{itemize}
+      \item \textbf{hyphen}: daughter-in-law
+      \item \textbf{en-dash}: pages13--67
+      \item \textbf{em-dash}: yes---or no?
+      \item \textbf{minus}: $0$, $1$, $-1$
+    \end{itemize}
+  \item \textbf{Tilde $\sim$}: \$\textbackslash sim\$
+  \item \textbf{Slash \slash}: to avoid treating two words as one, use \textbackslash slash instead of /, like read\slash write. but for ratios or units, use / directly, like 5MB/s.
+  \item \textbf{Degree Symbol}: 30 \textcelsius{} is 86 \textdegree{}F.
+  \item \textbf{Ellipsis}: \textbackslash ldots (low dots), \ldots.
+  \item \textbf{Environment}:
+    \begin{itemize}
+      \item itemize, enumerate, description
+      \item flushleft, flushright, center
+      \item quote, quotation, verse
+      \item abstract
+      \item verbatim: print what inside
+      \item tabular: table.  \textbackslash \{tabular\}[\textit{pos}]\{table spec\}
+    \end{itemize}
+\end{itemize}
+
+\subsection{Tips} % LaTeXe Tips
+\begin{enumerate}
+  \item a
+\end{enumerate}
+\newpage
+
+
+\section{Vim} % Vim Note
+\subsection{Tips} % Vim Tips
+\begin{enumerate}
+  \item \textbf{Movement}:
+    \begin{itemize}
+      \item \textbf{row}: h(left), j(down), k(up), l(right); 3h, 4j, 5k, 6l;
+      \item \textbf{move word forward}: w, 3w; \textbf{move word backward}: b, 3b;
+      \item \textbf{move to first line}: gg; \textbf{move to last line}: G; \textbf{move to num line}: num + G;
+      \item \textbf{move to the end of a line}: \$; SHIRT + A;
+      \item \textbf{move to the beginning of a line}: \^{};
+    \end{itemize}
+  \item Undo: u; Redo: CTRL + R
+\end{enumerate}
+
+\end{document}
